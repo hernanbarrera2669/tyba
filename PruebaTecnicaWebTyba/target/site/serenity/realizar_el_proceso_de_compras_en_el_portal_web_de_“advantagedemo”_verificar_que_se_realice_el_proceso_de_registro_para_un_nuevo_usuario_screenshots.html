@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_realizar_el_proceso_de_compras_en_el_portal_web_de_“advantagedemo”.html">Realizar El Proceso De Compras En El Portal Web De &ldquo;Advantagedemo&rdquo;</a></span>
+                > <span class="truncate-60"><a
+                    href="realizar_el_proceso_de_compras_en_el_portal_web_de_“advantagedemo”_verificar_que_se_realice_el_proceso_de_registro_para_un_nuevo_usuario.html">Verificar que se realice el proceso de registro para un nuevo usuario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 13-06-2022 18:15</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Realizar El Proceso De Compras En El Portal Web De “Advantagedemo” </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como cliente de “AdvantageDemo”<br />
+Deseo realizar el proceso de compras de un producto<br />
+Para verificar su correcto funcionamiento
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_registrousuario.html">Registrousuario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Verificar que se realice el proceso de registro para un nuevo usuario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No such element exception: Cannot locate element with text: Medellin</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.tyba.tasks.DatosRegistro.performAs(DatosRegistro.java:61)<br />com.tyba.stepdefinitions.AdvantageStepDefinitions.datosRegistro(AdvantageStepDefinitions.java:39)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource6701404080172457782.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2c3c20b41028189f1846261814c2fd7e383a4c77b8ebdccb7262027ac63bd1b0.png" title=" Dado que el usuario ingresa al portal web de AdvantageDemo" width="1920"/>
+                <img src="2c3c20b41028189f1846261814c2fd7e383a4c77b8ebdccb7262027ac63bd1b0.png" title=" usuario Abrir p&aacute;gina principal de AdvangeDEmo" width="1920"/>
+                <img src="2c3c20b41028189f1846261814c2fd7e383a4c77b8ebdccb7262027ac63bd1b0.png" title=" usuario opens the Ingreso advantage demo" width="1920"/>
+                <img src="2c3c20b41028189f1846261814c2fd7e383a4c77b8ebdccb7262027ac63bd1b0.png" title=" usuario Abrir p&aacute;gina principal de AdvangeDEmo (completed)" width="1920"/>
+                <img src="2c3c20b41028189f1846261814c2fd7e383a4c77b8ebdccb7262027ac63bd1b0.png" title=" Dado que el usuario ingresa al portal web de AdvantageDemo (completed)" width="1920"/>
+                <img src="28366f9a9da6f3169df8439c87109cadbdcb018a43d2362514f323afdaa05326.png" title=" Cuando ingrese a la opcion usuario para crear nueva cuenta con los datos
+| username | email | password | confirm_password | name | last_name | country | city |
+| HernanB | hernan2669@gmail.com | Test1986* | Test1986* | Hernan | Barrera | Colombia | Medellin |" width="1920"/>
+                <img src="28366f9a9da6f3169df8439c87109cadbdcb018a43d2362514f323afdaa05326.png" title=" usuario Se ingresan los datos de usuario" width="1920"/>
+                <img src="42a37d333d22f6f361b67d080313254362c62a8e7e453f9d8873455e563d2323.png" title=" usuario clicks on Boton de usuario para registrarse o acceder" width="1920"/>
+                <img src="ec2eaf0cf7f12bb4177952994e58fd855c96a85478f8a66a2d2500d6730eb16f.png" title=" usuario clicks on Boton de usuario para registrarse o acceder (completed)" width="1920"/>
+                <img src="ec2eaf0cf7f12bb4177952994e58fd855c96a85478f8a66a2d2500d6730eb16f.png" title=" usuario clicks on Boton para crear una cuenta nueva" width="1920"/>
+                <img src="b0146fc11f6ede55e3a5802caed9050478d54fa0cfa8b75c8a2f77d775358e61.png" title=" usuario clicks on Boton para crear una cuenta nueva (completed)" width="1920"/>
+                <img src="b0146fc11f6ede55e3a5802caed9050478d54fa0cfa8b75c8a2f77d775358e61.png" title=" usuario enters 'HernanB' into Formulario de Ingreso para Nombre de Usuario" width="1920"/>
+                <img src="d932e6f384cce7839844977cfd56158920ff69e481cc8977f2e46aa4a4fd2063.png" title=" usuario enters 'HernanB' into Formulario de Ingreso para Nombre de Usuario (completed)" width="1920"/>
+                <img src="d932e6f384cce7839844977cfd56158920ff69e481cc8977f2e46aa4a4fd2063.png" title=" usuario enters 'hernan2669@gmail.com' into Formulario de Ingreso para EMAIL" width="1920"/>
+                <img src="67e24036850b36e0914bc36af3361acb0e2549167e1217931c64070223551ff2.png" title=" usuario enters 'hernan2669@gmail.com' into Formulario de Ingreso para EMAIL (completed)" width="1920"/>
+                <img src="67e24036850b36e0914bc36af3361acb0e2549167e1217931c64070223551ff2.png" title=" usuario enters 'Test1986*' into Formulario de Ingreso para PASSWORD" width="1920"/>
+                <img src="1438a4c43c5078869268f887a7d873d956b87b5ae5d0aabcc777811019d86460.png" title=" usuario enters 'Test1986*' into Formulario de Ingreso para PASSWORD (completed)" width="1920"/>
+                <img src="1438a4c43c5078869268f887a7d873d956b87b5ae5d0aabcc777811019d86460.png" title=" usuario enters 'Test1986*' into Formulario de Ingreso para CONFIRMAR PASSWORD" width="1920"/>
+                <img src="01dc50e1114a1feb2ab6984466b91db9047ce7f008a1a41a6000c1b77f8c0817.png" title=" usuario enters 'Test1986*' into Formulario de Ingreso para CONFIRMAR PASSWORD (completed)" width="1920"/>
+                <img src="01dc50e1114a1feb2ab6984466b91db9047ce7f008a1a41a6000c1b77f8c0817.png" title=" usuario enters 'Hernan' into Formulario de Ingreso para NOMBRE" width="1920"/>
+                <img src="e7bcfce8911289083e4d671f3a0f018b41e7a831c910e026d82cc7359d14767c.png" title=" usuario enters 'Hernan' into Formulario de Ingreso para NOMBRE (completed)" width="1920"/>
+                <img src="ec2674782587e1782177bea282eb2a6ade9d832d183d08c87757ecae24f1fef2.png" title=" usuario enters 'Barrera' into Formulario de Ingreso para APELLIDO&gt;" width="1920"/>
+                <img src="912b9bb5c0c1d37ff8688324e370b55c516cbc4a537d123e9767b6cbfbcbe7fb.png" title=" usuario enters 'Barrera' into Formulario de Ingreso para APELLIDO&gt; (completed)" width="1920"/>
+                <img src="912b9bb5c0c1d37ff8688324e370b55c516cbc4a537d123e9767b6cbfbcbe7fb.png" title=" usuario clicks on Formulario de Ingreso para PAIS" width="1920"/>
+                <img src="9c36e02506f7b095aaae08bb00536737c479248535542d432d36265d8a9fb03c.png" title=" usuario clicks on Formulario de Ingreso para PAIS (completed)" width="1920"/>
+                <img src="9c36e02506f7b095aaae08bb00536737c479248535542d432d36265d8a9fb03c.png" title=" usuario select Medellin on Formulario de Ingreso para PAIS" width="1920"/>
+                <img src="9c36e02506f7b095aaae08bb00536737c479248535542d432d36265d8a9fb03c.png" title=" usuario select Medellin on Formulario de Ingreso para PAIS (completed): <span class='error-color'>ERROR</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.5</span>
+</div>
+</body>
+</html>
